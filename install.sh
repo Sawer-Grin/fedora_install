@@ -15,4 +15,4 @@ dnf -y update && dnf install git &&  dnf -y groupinstall "Development Tools" \
 && systemctl start docker && docker run hello-world && chmod 666 /var/run/docker.sock \
 && rpm --import https://packages.microsoft.com/keys/microsoft.asc \
 && sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo' \
-&& dnf install code && sudo dnf install libpq-devel && sudo dnf install libpqxx-devel && sudo dnf install boost-devel
+&& dnf install code libpq-devel libpqxx-devel boost-devel gtest-devel cmake
